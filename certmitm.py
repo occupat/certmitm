@@ -50,7 +50,7 @@ def threaded_connection_handler(downstream_socket):
         mitm_connection = certmitm.connection.mitm_connection(downstream_socket, logger)
         connection = certmitm.connection.connection(mitm_connection.downstream_socket, logger)
 
-        targets: list[str] = ["google.com", "googleapis.com", "facebook.com", "map.baidu.com", "weather.com"]
+        targets: list[str] = ["google.com", "googleapis.com", "facebook.com", "map.baidu.com", "weather.com", "samsungapps.com", "live.com"]
         patterns: tuple[str, ...] = tuple(
             candidate for item in targets for candidate in (item, f".{item}")
         )
