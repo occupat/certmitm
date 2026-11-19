@@ -259,7 +259,7 @@ if __name__ == '__main__':
             exitstr = "see "+str(sys.argv[0])+" -h for help"
             exit(exitstr)
 
-    if args.verbose:
+    if args.verbose or args.debug:
         print(args)
 
     connection_tests = certmitm.connection.connection_tests(logger, working_dir, args.retrytests[0], args.skip_additional_tests)
